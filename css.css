@@ -1,0 +1,231 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: black;
+  list-style: none;
+}
+
+.dashboard{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10em 1fr 1fr 6em;
+  grid-template-rows: 3.5em 1fr 4em;
+  grid-template-areas: "headerizq widget widget headerder"
+                       "sidebar main main main"
+                       "footer footer footer footer";
+}
+
+header{
+  grid-area: headerizq;
+  background-color: blanchedalmond;
+  display: flex;
+  align-items: center;
+}
+
+.header-main{
+  inline-size: min(100% - 44px, 1816px);
+  margin-inline: auto;
+  gap: 2rem;
+  display: flex;
+}
+
+.header-izq{
+  width: 100%;
+  /* align-items: center; */
+  
+  text-align: center;
+}
+
+.header-izq strong{
+  font-size: 2rem;
+}
+
+.header-mid{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.widget{
+  grid-area: widget;
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  padding: 0px 2rem;
+
+
+}
+
+.widget input{
+  flex: 1;
+  background-color: aqua;
+}
+
+.widget h1{
+  font-size: 1.5rem;
+}
+
+.header-gp-der{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: headerder;
+  background-color: peru;
+}
+
+
+.header-der{
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+}
+
+aside{
+  grid-area: sidebar;
+  background-color: dimgray;
+  /* height: 100vh; */
+  text-align: center;
+}
+
+.aside-container{
+  padding: 2em;
+  /* flex-direction: column; */
+  gap: 2rem;
+}
+
+
+.aside-container ul{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aside-container a{
+  font-size: 1.4rem;
+}
+main{
+  grid-area: main;
+  background-color: rgb(175, 240, 175);
+
+}
+
+.card-container{
+  padding: 2em 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+
+
+}
+
+.card{
+  max-width: 300px;
+  background-color: rgb(218, 172, 172);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  border-radius: 10%;
+}
+
+.card h1{
+  padding: 1rem 0px;
+  /* height: 2rem; */
+}
+
+.card p{
+  padding: 0px 2rem;
+}
+
+.button-container{
+  padding: 1rem 2rem;
+  width: 100%;
+  
+}
+
+.card button{
+  background-color: darkolivegreen;
+  border: solid 1px ;
+  padding: 1rem 0px;
+  width: 100%;
+
+}
+ 
+footer{
+  background-color: violet;
+  grid-area: footer;
+
+
+  
+}
+
+@media(max-width: 768px){
+  .dashboard{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4em 1fr 1fr 3em;
+  grid-template-rows: 3.5em 1fr 4em;
+  grid-template-areas: "headerizq widget widget headerder"
+                       "main main main main"
+                       "footer footer footer footer";
+}
+
+header{
+  width: 100%;
+}
+.header-main{
+  width: 100%;
+  /* margin-inline: auto; */
+  gap: 2rem;
+  display: flex;
+}
+
+.header-izq{
+  width: 100%;
+}
+.header-main strong{
+  font-size: 1rem;
+  /* min-width: 200px; */
+}
+
+.widget{
+  /* display: none; */
+  flex: 1;
+}
+
+.widget h1{
+  display: none;
+}
+
+.header-der{
+  /* width: 100%; */
+  display: flex;
+  text-align: center;
+
+}
+
+aside{
+  display: none;
+}
+.card-container{
+  min-width: 300px;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+}
+.card{
+  /* min-width: 500px; */
+  background-color: rgb(218, 172, 172);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  border-radius: 10%;
+}
+}
